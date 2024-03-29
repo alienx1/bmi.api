@@ -27,6 +27,6 @@ func (repository *bmiRepositoryImpl) Insert(ctx context.Context, product entity.
 
 func (repository *bmiRepositoryImpl) FindAl(ctx context.Context) []entity.Bmi {
 	var bmi []entity.Bmi
-	repository.DB.WithContext(ctx).Find(&bmi)
+	repository.DB.WithContext(ctx).Order("create_date DESC").Find(&bmi)
 	return bmi
 }

@@ -56,6 +56,7 @@ func (service *bmiServiceImpl) FindAll(ctx context.Context) (responses []model.B
 			Id:          bmi.Id.String(),
 			Kg:          bmi.Kg,
 			M:           bmi.M,
+			Bmi:         bmi.Bmi,
 			Description: bmi.Description,
 		})
 	}
